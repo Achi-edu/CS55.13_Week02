@@ -1,0 +1,18 @@
+{
+  "author": "Achilles",
+  "msg": "Choose your platform:",
+  "buttons": [
+    {
+      "label": "Windows",
+      "message": "Ok, you can play the good video games, but watch out for viruses!"
+    },
+    {
+      "label": "OSX",
+      "message": "Great UX, harder to break, but just do it like I tell you!"
+    },
+    {
+      "label": "Linux",
+      "message": "Ooooh... now you're developing! H0w l33t!"
+    }
+  ]
+}

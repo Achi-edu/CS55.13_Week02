@@ -1,0 +1,50 @@
+
+body {
+    maring:0;
+    padding:0;
+    background-color: #e1e1e1;
+}
+#csApp {
+    width:80%;
+    min-width: 240px;
+    max-width: 480px;
+    margin: 20px auto;
+    padding: 1.5em 2em;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+h1 {
+    margin-top:2.5em;
+    text-align: center;
+}
+button {
+    margin: 5px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    background-color: #efefef;
+    padding:5px 10px;
+}
+button:hover {
+    background-color: #ffffff;
+    cursor: pointer;
+}
+button:first-of-type {
+    background-color: #9ab9d2;
+}
+button:first-of-type:hover {
+    background-color: #3281e1;
+}
+button:nth-of-type(2) {
+    background-color: #aeacd2;
+}
+button:nth-of-type(2):hover {
+    background-color: #9d9dde;
+}
+button:nth-of-type(3) {
+    background-color: #570e1c;
+    color: #ffffff;
+}
+button:nth-of-type(3):hover {
+    background-color: #2e040d;
+}

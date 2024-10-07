@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Node.js Server</title>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone@7.22.10/babel.min.js"></script>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<h1>Achilles' App: How l33t are you?!</h1>
+<div id="csApp"></div>
+
+<script type="text/babel">
+  "use strict";
+
+  function OSList(props) {
+    const [getMessage, setMessage] = React.useState(props.data.msg);
+
+    const handleClick = (message) => {
+      setMessage(message);
+    };
+
+    return (
+            <div>
+              <h2>Author: {props.data.author}</h2>
+              <p>{getMessage}</p>
+              <div>
+                {props.data.buttons.map((button, index) => (
+                        <button key={index} onClick={() => handleClick(button.message)}>
+                          {button.label}
+                        </button>
+                ))}
+              </div>
+            </div>
+    );
+  }
+
+  $.getJSON('data.json', function(jsonData) {
+    const myRoot = ReactDOM.createRoot(document.getElementById('csApp'));
+    myRoot.render(
+            <OSList data={jsonData} />
+    );
+  });
+</script>
+</body>
+</html>
